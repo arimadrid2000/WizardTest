@@ -2,7 +2,7 @@
 
 ### Por favor siga las instrucciones a continuación descritas para tener acceso al proyecto:
 
-1. Descargue o clone el proyecto ejecutando el siguiente comando `git clone [https://github.com/arimadrid2000/WizardTest.git]`.
+1. Descargue o clone el proyecto ejecutando el siguiente comando `git clone https://github.com/arimadrid2000/WizardTest.git`.
 2. Copie la ruta del archivo `index.html` ubicado en la carpeta principal `Wizard`.
 3. Pegue la ruta en su navegador y presione el botón `Enter` para revisar la maqueta de `Wizard`.
 
