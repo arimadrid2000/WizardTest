@@ -1,0 +1,140 @@
+
+body {
+  background-color: #ececec;
+}
+
+.navbar-rombus {
+  background-image: linear-gradient(to right, #123a40, #00000f);
+  justify-content: flex-start;
+}
+
+.navbar-rombusRight {
+  right: 1em;
+  top: .5em;
+}
+
+.navbar-togglerIcon {
+  color: #ececec;
+  width: 1.5em;
+  height: 1.5em;
+}
+
+button.navbar-toggler:focus {
+  outline: none;
+}
+
+.navbar-rombusUser {
+  border: 2px solid #0aa1be;
+  padding: .8rem;
+}
+
+.rombus-bg {
+  background-color: #00a2c2;
+}
+
+.rombus-color {
+  color: #07a0c0;
+}
+
+.rombus-h5 {
+  font-size: 1.2rem;
+}
+
+.rombus-span {
+  font-size: .9rem;
+}
+
+.rombus-label {
+  font-size: .8rem;
+}
+
+.rombus-logo {
+  width: 110px;
+  height: 30px
+}
+
+.rombus-file-input {
+  border: 2px dashed #24a4b4;
+  font-size: 11px;
+}
+
+.rombus-secondary:focus, .rombus-secondary:hover, .rombus-secondary:focus-within, .rombus-secondary:active {
+  background-color: #17a2b8;
+}
+
+.rombus-link {
+  cursor: pointer;
+}
+
+.btn-outline-secondary:focus {
+  box-shadow: none;
+}
+
+.btn-outline-secondary:focus-within {
+  color: white;
+}
+
+.rombus-block {
+  background-color: white;
+  border-radius: 0;
+  font-size: 12px;
+  width: 23%;
+  height: 100%;
+}
+
+.rombus-warning:focus, .rombus-warning:focus-within, .rombus-warning:hover, .rombus-warning:active, .rombus-list-item-warning:focus, .rombus-list-item-warning:hover, .rombus-list-item-warning:active, .rombus-list-item-warning.active {
+  background-color: #fbb736;
+  color: white;
+  box-shadow: none;
+}
+
+.rombus-danger:focus, .rombus-danger:focus-within, .rombus-danger:hover, .rombus-danger:active, .rombus-list-item-danger:focus, .rombus-list-item-danger:hover, .rombus-list-item-danger:active, .rombus-list-item-danger.active {
+  background-color: #d01d00;
+  color: white;
+  box-shadow: none;
+}
+
+.rombus-list-active:focus, .rombus-list-active:active, .rombus-list-active:hover {
+  color: white;
+}
+
+.rombus-info:focus, .rombus-info:focus-within, .rombus-info:hover, .rombus-info:active, .rombus-list-item-info:focus, .rombus-list-item-info:hover, .rombus-list-item-info:active, .rombus-list-item-info.active {
+  background-color: #0e76bc;
+  color: white;
+  box-shadow: none;
+}
+
+.rombus-purple:focus, .rombus-purple:focus-within, .rombus-purple:hover, .rombus-purple:active, .rombus-list-item-purple:focus, .rombus-list-item-purple:hover, .rombus-list-item-purple:active, .rombus-list-item-purple.active {
+  background-color: #9f1f63;
+  color: white;
+  box-shadow: none;
+}
+
+.btn-outline-secondary:not(:disabled):not(.disabled):active, .btn-outline-secondary:hover {
+  background-color: transparent;
+}
+
+@media screen and (min-width: 992px) {
+  .navbar-collapse#NavbarRombus {
+    position: absolute;
+    right: 7rem;
+  }
+  .navbar.navbar-rombus {
+    height: 6rem;
+  }
+  .rombus-logo {
+    width: 200px;
+    height: 55px;
+  }
+}
+
+/* 481-767 */
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+  #step-text {
+    font-size: 12px;
+  }
+  #step-count {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Wizard</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-rombus px-lg-5">
+    <a class="navbar-brand" href="#">
+      <img src="images/LOGO_ROMBUS.png" class="rombus-logo" alt="ROMBUS" loading="lazy">
+    </a>
+    <div class="position-absolute d-flex navbar-rombusRight">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#NavbarRombus" aria-controls="NavbarRombus" aria-expanded="false" aria-label="Toggle navigation">
+        <svg class="navbar-togglerIcon" viewBox="0 0 16 16" class="bi bi-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+        </svg>
+      </button>
+      <span class="navbar-rombusUser d-flex rounded-circle mt-lg-3 mr-lg-4">
+        <img src="images/icons/ic_person_black_24px.png" alt="person icon">
+      </span>
+    </div>
+  
+    <div class="collapse navbar-collapse" id="NavbarRombus">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link text-white" href="#">Soluciones <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Staff</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Blog</a>
+        </li>
+        <li class="nav-item">
+          <button class="btn rombus-bg border text-white rounded-pill px-5">Publicar proyecto</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="row my-md-4 my-lg-5">
+      <div class="col-sm-12 col-md-3 d-sm-flex d-md-block my-3 text-left">
+        <span class="mr-2 rounded-circle bg-info py-2 px-2 text-white h6" id="step-count">1/4</span>
+        <h6 class="text-info align-bottom pt-2 text-uppercase d-inline-flex mb-1" id="step-text">definición</h6>
+      </div>
+      <div class="col-sm-12 col-md-9 my-md-3" id="step-one">
+        <dd class="font-weight-light rombus-h5">
+          Cuéntanos de qué trata tu proyecto
+        </dd>
+        <dd class="font-weight-light rombus-span">Explica brevemente en qué cosiste tu necesidad y en 4 pasos tendrás un plan a tu medida.</dd>
+        <form class="needs-validation" novalidate>
+          <div class="form-group">
+            <label for="title" class="font-weight-light rombus-label">Ponle un título fácil, que identifique tu requerimiento *</label>
+            <input type="text" class="form-control rounded-0" id="title" placeholder="Título del proyecto (Ej: ...)" required>
+            <div class="invalid-feedback">
+              ¡Por favor indique el título de su proyecto!
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="description" class="font-weight-light rombus-label">Agrega un párrafo que nos ayude a entender claramente lo que necesitas o el objetivo que deseas lograr. *</label>
+            <textarea class="form-control rounded-0" id="description" rows="4" aria-describedby="inputRequire" placeholder="Descripción del proyecto" required></textarea>
+            <div class="invalid-feedback">
+              ¡Debe añadir una descripción a su proyecto!
+            </div>
+            <small id="inputRequire" class="form-text text-muted">* Obligatorio</small>
+          </div>
+          <div class="d-flex justify-content-end">
+            <button type="submit" class="btn bg-info rounded-0 text-white w-75">Continuar</button>
+          </div>
+        </form>
+      </div>
+      <!-- <div class="col-sm-12 col-md-9 my-md-3" id="step-two">
+        <dd class="font-weight-light rombus-h5">
+          Selecciona el área profesional adecuada
+        </dd>
+        <dd class="font-weight-light rombus-label">Elige el servicio que enfoca tu necesidad principal, luego señala, dentro del área elegida, la categoría y subcategoría que correspondan.*</dd>
+        <div class="d-sm-block">
+          <button class="btn btn-light rounded-0 btn-block border py-4" type="button" data-toggle="collapse" data-target="#marketing" aria-expanded="false" aria-controls="marketing">
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-binoculars-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.5 1A1.5 1.5 0 0 0 3 2.5V3h4v-.5A1.5 1.5 0 0 0 5.5 1h-1zM7 4v1h2V4h4v.882a.5.5 0 0 0 .276.447l.895.447A1.5 1.5 0 0 1 15 7.118V13H9v-1.5a.5.5 0 0 1 .146-.354l.854-.853V9.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v.793l.854.853A.5.5 0 0 1 7 11.5V13H1V7.118a1.5 1.5 0 0 1 .83-1.342l.894-.447A.5.5 0 0 0 3 4.882V4h4zM1 14v.5A1.5 1.5 0 0 0 2.5 16h3A1.5 1.5 0 0 0 7 14.5V14H1zm8 0v.5a1.5 1.5 0 0 0 1.5 1.5h3a1.5 1.5 0 0 0 1.5-1.5V14H9zm4-11H9v-.5A1.5 1.5 0 0 1 10.5 1h1A1.5 1.5 0 0 1 13 2.5V3z"/>
+            </svg>
+            Estrategia y Marketing
+          </button>
+          <div class="col-sm-12">
+            <div class="collapse multi-collapse" id="marketing">
+              <div class="card card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-light rounded-0 btn-block border py-4" type="button" data-toggle="collapse" data-target="#design" aria-expanded="false" aria-controls="design">
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-eye-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+              <path fill-rule="evenodd" d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+            </svg>
+            Diseño y Creatividad
+          </button>
+          <div class="col-sm-12">
+            <div class="collapse multi-collapse" id="design">
+              <div class="card card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-light rounded-0 btn-block border py-4" type="button" data-toggle="collapse" data-target="#publicity" aria-expanded="false" aria-controls="publicity">
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-hand-thumbs-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M6.956 1.745C7.021.81 7.908.087 8.864.325l.261.066c.463.116.874.456 1.012.965.22.816.533 2.511.062 4.51a9.84 9.84 0 0 1 .443-.051c.713-.065 1.669-.072 2.516.21.518.173.994.681 1.2 1.273.184.532.16 1.162-.234 1.733.058.119.103.242.138.363.077.27.113.567.113.856 0 .289-.036.586-.113.856-.039.135-.09.273-.16.404.169.387.107.819-.003 1.148a3.163 3.163 0 0 1-.488.901c.054.152.076.312.076.465 0 .305-.089.625-.253.912C13.1 15.522 12.437 16 11.5 16v-1c.563 0 .901-.272 1.066-.56a.865.865 0 0 0 .121-.416c0-.12-.035-.165-.04-.17l-.354-.354.353-.354c.202-.201.407-.511.505-.804.104-.312.043-.441-.005-.488l-.353-.354.353-.354c.043-.042.105-.14.154-.315.048-.167.075-.37.075-.581 0-.211-.027-.414-.075-.581-.05-.174-.111-.273-.154-.315L12.793 9l.353-.354c.353-.352.373-.713.267-1.02-.122-.35-.396-.593-.571-.652-.653-.217-1.447-.224-2.11-.164a8.907 8.907 0 0 0-1.094.171l-.014.003-.003.001a.5.5 0 0 1-.595-.643 8.34 8.34 0 0 0 .145-4.726c-.03-.111-.128-.215-.288-.255l-.262-.065c-.306-.077-.642.156-.667.518-.075 1.082-.239 2.15-.482 2.85-.174.502-.603 1.268-1.238 1.977-.637.712-1.519 1.41-2.614 1.708-.394.108-.62.396-.62.65v4.002c0 .26.22.515.553.55 1.293.137 1.936.53 2.491.868l.04.025c.27.164.495.296.776.393.277.095.63.163 1.14.163h3.5v1H8c-.605 0-1.07-.081-1.466-.218a4.82 4.82 0 0 1-.97-.484l-.048-.03c-.504-.307-.999-.609-2.068-.722C2.682 14.464 2 13.846 2 13V9c0-.85.685-1.432 1.357-1.615.849-.232 1.574-.787 2.132-1.41.56-.627.914-1.28 1.039-1.639.199-.575.356-1.539.428-2.59z"/>
+            </svg>
+            Publicidad y Campañas
+          </button>
+          <div class="col-sm-12">
+            <div class="collapse multi-collapse" id="publicity">
+              <div class="card card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-light rounded-0 btn-block border py-4" type="button" data-toggle="collapse" data-target="#technology" aria-expanded="false" aria-controls="technology">
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-code-slash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0zm-.999-3.124a.5.5 0 0 1 .33.625l-4 13a.5.5 0 0 1-.955-.294l4-13a.5.5 0 0 1 .625-.33z"/>
+            </svg>
+            Programación y Tecnología
+          </button>
+          <div class="col-sm-12">
+            <div class="collapse multi-collapse" id="technology">
+              <div class="card card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </main>
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <script src="js/rombus.js"></script>
+</body>
+</html>
